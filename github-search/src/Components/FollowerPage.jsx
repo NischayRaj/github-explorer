@@ -21,7 +21,6 @@ const FollowersPage = ({ match }) => {
   }, [match.params.username]);
 
   const onViewFollowerRepositoryList = (follower) => {
-    // Redirect to the repository list page of the selected follower
     navigate(`/repositories/${follower.login}`);
   };
 

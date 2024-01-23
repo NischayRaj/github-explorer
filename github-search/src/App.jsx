@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/repository/:username" element={<RepositoryPage />} />
+        <Route path="/repositories/:username" element={<RepositoryPage />} />
         <Route path="/repository/:id" element={<RepositoryDetails />} />
         <Route path="/followers/:username" element={<FollowersPage />} />
       </Routes>

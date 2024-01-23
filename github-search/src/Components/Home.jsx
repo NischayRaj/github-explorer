@@ -7,7 +7,7 @@ const Home = () => {
 
   const handleSubmit = () => {
     // Redirect to the repository list page with the entered username
-    navigate(`/repositories/${username}`);
+  navigate(`/repositories/${username}`);
   };
 
   return (
