@@ -1,23 +1,26 @@
 import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
-
+import '../Style/HomeStyle.css'
 const Home = () => {
   const [username, setUsername] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = () => {
-    // Redirect to the repository list page with the entered username
   navigate(`/repositories/${username}`);
   };
 
   return (
-    <div>
+    <div className="container">
+      <h1 className="title">Github Explorer</h1>
       <input
         type="text"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
+        className="input"
       />
-      <button onClick={handleSubmit}>Search</button>
+      <button onClick={handleSubmit} className="button">
+        Search
+      </button>
     </div>
   );
 };

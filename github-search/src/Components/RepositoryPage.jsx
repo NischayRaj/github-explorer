@@ -1,7 +1,6 @@
-// RepositoryListPage.js
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-
+import '../Style/RepoStyle.css'
 const RepositoryPage = () => {
   const { username } = useParams();
   const [user, setUser] = useState({});
@@ -41,16 +40,19 @@ const RepositoryPage = () => {
   return (
     <div>
       <div>
-        <img src={user.avatar_url} alt={user.login} />
+        <img className="avatar" src={user.avatar_url} alt={user.login} />
         <h2>{user.login}</h2>
-        {/* Display other user info here */}
       </div>
 
-      <ul>
+      <div className="card-container">
         {repositories.map((repo) => (
-          <li key={repo.id}>{repo.name}</li>
+          <div key={repo.id} className="card">
+            <img src={repo.owner.avatar_url} alt={repo.owner.login} />
+            <h3>{repo.name}</h3>
+            <p>{repo.description}</p>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
