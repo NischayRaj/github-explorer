@@ -1,10 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 
-const Home = ({ onSubmit }) => {
+const Home = () => {
   const [username, setUsername] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = () => {
-    onSubmit(username);
+    // Redirect to the repository list page with the entered username
+    navigate(`/repositories/${username}`);
   };
 
   return (
