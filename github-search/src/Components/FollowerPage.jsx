@@ -1,4 +1,3 @@
-// Import necessary hooks from 'react-router-dom'
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -7,7 +6,6 @@ const FollowersPage = ({ match }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Fetch followers data when the component mounts
     const fetchFollowersData = async () => {
       const username = match.params.username;
       const followersResponse = await fetch(
