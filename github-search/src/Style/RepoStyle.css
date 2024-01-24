@@ -1,18 +1,18 @@
 .card-container {
   display: flex;
+  background-color: rgba(239, 239, 239, 0.964);
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-top: 20px;
+  margin: 30px;
+  flex-direction: row;
 }
 
 .card {
-  width: 220px;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  margin: 15px;
+  width: 400px;
+  background-color: rgba(239, 239, 239, 0.964);
+  margin: 15px 0;
   padding: 15px;
   text-align: left;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s;
 }
 
@@ -22,7 +22,10 @@
 
 .card img {
   max-width: 100%;
-  border-radius: 8px;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
 }
 
 .card h3 {

@@ -40,8 +40,8 @@ const RepositoryPage = () => {
   return (
     <div>
       <div>
-        <img className="avatar" src={user.avatar_url} alt={user.login} />
-        <h2>{user.login}</h2>
+        {/* <img className="avatar" src={user.avatar_url} alt={user.login} /> */}
+        {/* <h2>{user.login}</h2> */}
       </div>
 
       <div className="card-container">
